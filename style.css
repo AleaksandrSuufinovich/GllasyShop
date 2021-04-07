@@ -1,48 +1,51 @@
-/* roboto-700 - latin_cyrillic */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Roboto'), local('roboto')
-         url('./fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-}
 /* roboto-500 - latin_cyrillic */
 @font-face {
     font-family: 'roboto';
     font-style: normal;
     font-weight: 500;
-    src: local('Roboto'), local('roboto')
+    src: url('./fonts/roboto-v20-latin_cyrillic-500.woff2'); /* IE9 Compat Modes */
+    src: local(''),
          url('./fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
          url('./fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
 }
-
+  /* roboto-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/roboto-v20-latin_cyrillic-700.woff2'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+}
 
 
 
 
 body {
     position: relative;
-    width: 1225px;
-    margin: 0 auto;
-    padding: 0;
     background-color: rgb(132, 157, 143);
 }
-body::after {
+
+.conteiner {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 25px;
+    width: 1225px;
+    margin: 0 auto;
+}
+.conteiner::after {
     content: '';
     background-image: url(./img/backlight.png);
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 100px;
     background-repeat: no-repeat;
     z-index: -1;
 }
-.conteiner {
-    margin-left: 26px;
-    margin-right: 52px;
-}
+
 
 
 
@@ -749,47 +752,56 @@ margin: 0;
     justify-content: space-between;
 }
 .social {
-    position: relative;
+    display: flex;
     width: 185px;
     height: 40px;
     margin-top: 36px;
     margin-left: 27px;
+    padding: 0;
+    list-style-type: none;
 }
-.social:hover {
-    cursor: pointer;
-}
-.tvitter {
+.tviter {
     background-image: url(./img/tvitter.svg);
+    width: 38px;
+    height: 38px;
     background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
+    padding-left: 10px;
+}
+.tviter:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .insta {
     background-image: url(./img/insta.svg);
+    width: 38px;
+    height: 38px;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 48px;
-    width: 40px;
-    height: 40px;
+    padding-left: 10px;
+}
+.insta:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .fb {
     background-image: url(./img/fb.svg);
+    width: 38px;
+    height: 38px;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 98px;
-    width: 40px;
-    height: 40px;
+    padding-left: 10px;
+}
+.fb:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .vk {
     background-image: url(./img/vk.svg);
+    width: 38px;
+    height: 38px;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 148px;
-    width: 40px;
-    height: 40px;
+}
+.vk:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .footer-menu {
     position: relative;
