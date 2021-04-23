@@ -124,9 +124,25 @@ body {
   border: 0;
   border-radius: 50%;
 }
+.modal-search {
+  position: fixed;
+  top: 60px;
+  left: 1155px;
+  display: none;
+}
+
 .search:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 1);
 }
+.search:hover::after {
+  background-image: url(./img/loupeblack.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 8px;
+  left: 9px;
+}
+
 .search:focus {
   outline: none;
 }
@@ -155,6 +171,16 @@ body {
 }
 .input:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+}
+.input:hover::before {
+  content: "";
+  background-image: url(./img/inputblack.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 8px;
+  left: 15px;
 }
 .input:focus {
   outline: none;
@@ -290,7 +316,7 @@ body {
 }
 
 .banners {
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
 }
 .banner-crimson {
@@ -888,12 +914,17 @@ body {
 }
 
 .assortment {
-  display: none;
+  position: absolute;
   width: 146px;
   height: 174px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+}
+.modal-assortment {
+  top: 55px;
+  left: 730px;
+  display: none;
 }
 .assortment-menu {
   list-style-type: none;
@@ -927,12 +958,17 @@ body {
 }
 
 .login-form {
+  position: fixed;
   width: 280px;
   height: 217px;
   background: #f8f7f4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+}
+.modal-login {
   display: none;
+  top: 60px;
+  left: 1325px;
 }
 .login-form input:nth-child(1) {
   width: 244px;
@@ -994,7 +1030,6 @@ body {
   background: #f8f7f4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: none;
 }
 .search-form input {
   width: 314px;
@@ -1011,16 +1046,12 @@ body {
   height: 445px;
   border-radius: 15px;
   background: #f8f7f4;
-  display: none;
 }
-.feedback::after {
-  content: "";
-  background-image: url(./img/cross-big.svg);
-  position: absolute;
-  width: 18px;
-  height: 17px;
-  top: 20px;
-  left: 445px;
+.modal-feedback {
+  position: fixed;
+  top: 336px;
+  left: 950px;
+  display: none;
 }
 .feedback h2 {
   font-family: "roboto";
@@ -1032,7 +1063,7 @@ body {
   margin-bottom: 20px;
   margin-top: 0px;
 }
-.feedback button {
+.send {
   border-radius: 50px;
   background: linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   mix-blend-mode: normal;
@@ -1070,18 +1101,32 @@ body {
   width: 431px;
   height: 158px;
 }
-.close {
+.modal-close {
   position: absolute;
-  opacity: 0.3;
-  width: 18px;
-  height: 18px;
+  top: 20px;
+  left: 440px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
 }
-.close:hover {
-  opacity: 1;
-}
-.close:before,
-.close:after {
+.modal-close::before,
+.modal-close::after {
+  content: "";
   position: absolute;
-  content: " ";
-  background-color: #333;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #231f20;
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+.modal-show {
+  display: block;
 }

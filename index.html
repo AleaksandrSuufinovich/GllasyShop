@@ -24,7 +24,7 @@
           </div>
           <nav class="nav">
             <ul class="main-nav">
-              <li><a href="#">Каталог</a></li>
+              <li><a class="catalog" href="#">Каталог</a></li>
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">О компании</a></li>
             </ul>
@@ -32,7 +32,7 @@
           <div class="menu">
             <ul class="user-menu">
               <li><button class="search"></button></li>
-              <li><button class="input">Вход</button></li>
+              <li><button class="input input-black">Вход</button></li>
               <li><button class="basket">Пусто</button></li>
             </ul>
           </div>
@@ -43,19 +43,19 @@
         </header>
         <section class="slider">
           <ul class="slider-list">
-            <li class="slider-item slide slide-current">
+            <li class="slider-item slide first-slide slide-current">
               <h3 class="slide-title">
                 Крем-брюле и пломбир<br />с малиновым джемом
               </h3>
               <a class="button slide-button" href="#">Давайте оба!</a>
             </li>
-            <li class="slider-item slide">
+            <li class="slider-item slide second-slide">
               <h3 class="slide-title">
                 Шоколадный пломбир<br />и лимооный сорбет
               </h3>
               <a class="button slide-button" href="#">Давайте оба!</a>
             </li>
-            <li class="slider-item slide">
+            <li class="slider-item slide third-slide">
               <h3 class="slide-title">
                 Пломбир с помадкой<br />и клубничный щербет
               </h3>
@@ -64,12 +64,12 @@
           </ul>
           <div class="slider-controls">
             <button
-              class="current"
+              class="first-slide-btn current"
               type="button"
               aria-label="Первый слайд"
             ></button>
-            <button type="button" aria-label="Второй слайд"></button>
-            <button type="button" aria-label="Третий слайд"></button>
+            <button class="second-slide-btn" type="button" aria-label="Второй слайд"></button>
+            <button class="third-slide-btn" type="button" aria-label="Третий слайд"></button>
           </div>
         </section>
         <section class="banners">
@@ -205,7 +205,7 @@
             <p>Для заказов по телефону:</p>
             <p>812 450-25-25</p>
             <p>(с 10 до 20 ежедневно)</p>
-            <button>Форма обратной связи</button>
+            <button class="feedback-button">Форма обратной связи</button>
           </div>
         </section>
         <footer class="footer">
@@ -228,37 +228,39 @@
         </footer>
       </div>
     </div>
-  </body>
-  <section class="assortment">
-    <ul class="assortment-menu">
-      <li><a href="#">Новинки</a></li>
-      <li><a href="#">Сливочное</a></li>
-      <li><a href="#">Щербеты</a></li>
-      <li><a href="#">Фруктовый лёд</a></li>
-      <li><a href="#">Мелорин</a></li>
-    </ul>
-  </section>
-  <section class="login-form">
-    <input type="text" placeholder="   email@example.com" />
-    <input type="text" placeholder="   email@example.com" />
-    <div class="login-form_btn">
-      <button>Войти</button>
-      <div class="login-form_link">
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
+    <section class="assortment modal-assortment">
+      <ul class="assortment-menu">
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Сливочное</a></li>
+        <li><a href="#">Щербеты</a></li>
+        <li><a href="#">Фруктовый лёд</a></li>
+        <li><a href="#">Мелорин</a></li>
+      </ul>
+    </section>
+    <section class="login-form modal-login">
+      <input type="text" name="login" placeholder="   email@example.com" />
+      <input type="text" name="password" placeholder="   email@example.com" />
+      <div class="login-form_btn">
+        <button>Войти</button>
+        <div class="login-form_link">
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="search-form">
-    <input type="text" placeholder="   Крем-брюле" />
-  </section>
-  <section class="feedback">
-    <h2>Мы обязательно вам ответим!</h2>
-    <div class="feedback-input">
-      <input type="text" placeholder="   Имя Фамилия" />
-      <input type="text" placeholder="   email@example.com" />
-      <input type="text" placeholder="   В свободной форме" />
-    </div>
-    <button>Отправить</button>
-  </section>
+    </section>
+    <section class="search-form modal-search">
+      <input type="text" placeholder="   Крем-брюле" />
+    </section>
+    <section class="feedback modal-feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <div class="feedback-input">
+        <input type="text" placeholder="   Имя Фамилия" />
+        <input type="text" placeholder="   email@example.com" />
+        <input type="text" placeholder="   В свободной форме" />
+      </div>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <button class="send">Отправить</button>
+    </section>
+    <script src="./index.js"></script>
+  </body>
 </html>
