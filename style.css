@@ -127,7 +127,7 @@ body {
 .modal-search {
   position: fixed;
   top: 60px;
-  left: 1155px;
+  left: 765px;
   display: none;
 }
 
@@ -968,7 +968,7 @@ body {
 .modal-login {
   display: none;
   top: 60px;
-  left: 1325px;
+  left: 1085px;
 }
 .login-form input:nth-child(1) {
   width: 244px;
@@ -1050,7 +1050,7 @@ body {
 .modal-feedback {
   position: fixed;
   top: 336px;
-  left: 950px;
+  left: 550px;
   display: none;
 }
 .feedback h2 {
