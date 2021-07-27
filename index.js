@@ -8,52 +8,60 @@ const search = document.querySelector(".search");
 const input = document.querySelector(".input");
 const popup = document.querySelector(".modal-login");
 const login = popup.querySelector("[name=login]");
-const buttonFirstSlide = document.querySelector(".first-slide-btn");
-const buttonSecondSlide = document.querySelector(".second-slide-btn");
-const buttonThirdSlide = document.querySelector(".third-slide-btn");
+// slide
 const firstSlide = document.querySelector(".first-slide");
 const secondSlide = document.querySelector(".second-slide");
 const thirdSlide = document.querySelector(".third-slide");
+const slides = document.querySelectorAll(".slider-item");
+console.log(slides);
+
 const background = document.querySelector(".site-wrapper");
+
+/*buttons*/
+const buttonFirstSlide = document.querySelector(".first-slide-btn");
+const buttonSecondSlide = document.querySelector(".second-slide-btn");
+const buttonThirdSlide = document.querySelector(".third-slide-btn");
+
+const buttons = document.querySelectorAll(".slide-btn");
 
 /* SLIDER */
 buttonFirstSlide.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonFirstSlide.classList.toggle("current");
-  buttonSecondSlide.classList.remove("current");
-  buttonThirdSlide.classList.remove("current");
-  firstSlide.classList.toggle("slide-current");
-  secondSlide.classList.remove("slide-current");
-  thirdSlide.classList.remove("slide-current");
-  background.classList.toggle("site-wrapper-1");
-  background.classList.remove("site-wrapper-2");
-  background.classList.remove("site-wrapper-3");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("current");
+  }
+  this.classList.add("current");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("slide-current");
+  }
+  firstSlide.classList.add("slide-current");
+  background.style.backgroundColor = "rgb(132, 157, 143)"
 });
 
 buttonSecondSlide.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonSecondSlide.classList.toggle("current");
-  buttonFirstSlide.classList.remove("current");
-  buttonThirdSlide.classList.remove("current");
-  secondSlide.classList.toggle("slide-current");
-  firstSlide.classList.remove("slide-current");
-  thirdSlide.classList.remove("slide-current");
-  background.classList.toggle("site-wrapper-2");
-  background.classList.remove("site-wrapper-1");
-  background.classList.remove("site-wrapper-3");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("current");
+  }
+  this.classList.add("current");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("slide-current");
+  }
+  secondSlide.classList.add("slide-current");
+  background.style.backgroundColor = "#8996a6"
 });
 
 buttonThirdSlide.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonThirdSlide.classList.toggle("current");
-  buttonFirstSlide.classList.remove("current");
-  buttonSecondSlide.classList.remove("current");
-  thirdSlide.classList.toggle("slide-current");
-  firstSlide.classList.remove("slide-current");
-  secondSlide.classList.remove("slide-current");
-  background.classList.toggle("site-wrapper-3");
-  background.classList.remove("site-wrapper-2");
-  background.classList.remove("site-wrapper-1");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("current");
+  }
+  this.classList.add("current");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("slide-current");
+  }
+  thirdSlide.classList.add("slide-current");
+  background.style.backgroundColor = "#9d8b84"
 });
 
 /* MODAL */

@@ -28,8 +28,10 @@ body {
   min-width: 940px;
   background-repeat: no-repeat;
   background-position: top center;
+  background-color: rgb(132, 157, 143);
+  background-image: url(./img/backlight.png);
 }
-.site-wrapper-1 {
+/*.site-wrapper-1 {
   background-color: rgb(132, 157, 143);
   background-image: url(./img/backlight.png);
 }
@@ -40,7 +42,7 @@ body {
 .site-wrapper-3 {
   background-color: #9d8b84;
   background-image: url(./img/backlight.png);
-}
+}*/
 
 .conteiner {
   position: relative;
@@ -52,7 +54,6 @@ body {
 
 .header {
   display: flex;
-  margin-top: 9px;
   height: 106px;
   position: relative;
   justify-content: center;
@@ -119,7 +120,7 @@ body {
 .modal-search {
   position: fixed;
   top: 60px;
-  left: 920px;
+  left: 960px;
   display: none;
 }
 
@@ -925,7 +926,7 @@ body {
 }
 .modal-assortment {
   top: 55px;
-  left: 730px;
+  left: 535px;
   display: none;
 }
 .assortment-menu {
@@ -970,7 +971,7 @@ body {
 .modal-login {
   display: none;
   top: 60px;
-  left: 1085px;
+  left: 1125px;
 }
 .login-form input:nth-child(1) {
   width: 244px;
@@ -1048,12 +1049,14 @@ body {
   height: 445px;
   border-radius: 15px;
   background: #f8f7f4;
+  
 }
 .modal-feedback {
   position: fixed;
   top: 336px;
   left: 700px;
   display: none;
+  box-shadow: rgba(0, 0, 0, 0.4);
 }
 .feedback h2 {
   font-family: "roboto";
